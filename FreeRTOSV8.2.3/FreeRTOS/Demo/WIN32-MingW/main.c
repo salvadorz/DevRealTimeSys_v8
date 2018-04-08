@@ -191,7 +191,7 @@ void vAssertCalled(unsigned long ulLine, const char * const pcFileName)
 	(void)ulLine;
 	(void)pcFileName;
 
-	printf("ASSERT! Line %d, file %s\r\n", ulLine, pcFileName);
+	printf("ASSERT! Line %d, file %s\r\n", (int)ulLine, pcFileName);
 
 	taskENTER_CRITICAL();
 	{
