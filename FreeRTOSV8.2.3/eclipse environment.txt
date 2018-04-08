@@ -1,0 +1,17 @@
+WINDOWS
+-Import > Existing Projects into Workspace
+-Select the directory where is the FreeRTOSVX.X.X project
+-Add the RTOSDemo project
+-Go to Properties on the RTOSDemo
+-C/C++ Build > Environment > Correct the MINGW_HOME and verify the PATH to contain the MinGW bin
+-C/C++ Build > Tool Chain Editor > Current toolchain > MinGW GCC (if neccesary uncheck Display compatible toolchains only box)
+-Add on "C/C++ Build > Settings > Tool Setting Tab > GCC C Compiler > Includes"
+	"${workspace_loc:/${ProjName}/FreeRTOS_Source/include}"
+	"${workspace_loc:/${ProjName}/FreeRTOS+Trace Recorder/Include}"
+	"${workspace_loc:/${ProjName}/FreeRTOS_Source/portable/MSVC-MingW}"
+	"${workspace_loc:/${ProjName}}"
+	"${workspace_loc:/${ProjName}/Standard_Demo_Tasks/Include}"
+-Add on "C/C++ Build > Settings > Tool Setting Tab > MinGW C Linker > Libraries"
+	winmm
+
+
