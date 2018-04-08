@@ -9,10 +9,12 @@ OS junk files
 #[Bb]uild/
 
 #Exclude objects files
-#*.o
+*.o
 #**/*.o
-#/FreeRTOSV8.2.3/FreeRTOS/Demo/WIN32-MingW/Debug/**/*.o
-#/FreeRTOSV8.2.3/FreeRTOS/Demo/WIN32-MingW/Debug/**.o
+#FreeRTOSv10.0.1/
+FreeRTOSv10.0.1/**
+FreeRTOSV8.2.3/FreeRTOS/Demo/WIN32-MingW/Debug/*/*.o
+FreeRTOSV8.2.3/FreeRTOS/Demo/WIN32-MingW/Debug/*.o
 
 #Visual Studio files
 #*.[Oo]bj

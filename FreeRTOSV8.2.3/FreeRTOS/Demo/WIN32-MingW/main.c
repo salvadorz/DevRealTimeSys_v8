@@ -211,8 +211,13 @@ void vAssertCalled(unsigned long ulLine, const char * const pcFileName)
 		value. */
 		while (ulSetToNonZeroInDebuggerToContinue == 0)
 		{
+#ifndef WIN32
 			__asm { NOP };
 			__asm { NOP };
+#else
+			__asm volatile( "NOP" );
+			__asm volatile( "NOP" );
+#endif
 		}
 	}
 	taskEXIT_CRITICAL();
