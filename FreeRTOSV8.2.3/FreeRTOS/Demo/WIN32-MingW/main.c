@@ -80,6 +80,8 @@ mission critical applications that require provable dependability.
 #include <timers.h>
 #include <math.h>
 
+#include "App/app.h"
+
 /* This demo uses heap_5.c, and these constants define the sizes of the regions
 that make up the total heap.  This is only done to provide an example of heap_5
 being used as this demo could easily create one large heap region instead of
@@ -134,6 +136,8 @@ int main(void)
 	events to the trace recording on each tick interrupt. */
 	vTraceInitTraceData();
 	xTickTraceUserEvent = xTraceOpenLabel("tick");
+
+	vApp_init();
 
 	//This starts the real-time scheduler
 	vTaskStartScheduler();
